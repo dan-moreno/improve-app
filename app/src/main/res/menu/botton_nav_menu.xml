@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/logros"
+        android:title="Logros"
+        android:icon="@drawable/ic_baseline_emoji_people"/>
+    <item
+        android:id="@+id/desafios"
+        android:title="Desafíos"
+        android:icon="@drawable/ic_baseline_flag"/>
+    <item
+        android:id="@+id/cuenta"
+        android:title="Cuenta"
+        android:icon="@drawable/ic_baseline_manage_account"/>
+</menu>
