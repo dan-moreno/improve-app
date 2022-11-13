@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/activity_desafio_cuenta.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/activity_desafio_detalle.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/activity_editar_cuenta.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/activity_home.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/activity_login.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/activity_main.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/activity_registro.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/activity_splash.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/desafio_card.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/fragment_cuenta.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/fragment_desafios.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/fragment_logros.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/layout/logro_card.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/Daniel Moreno/AndroidStudioProjects/ImproveApp/app/src/main/res/menu/botton_nav_menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
