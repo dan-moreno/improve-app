@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCC2FA">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="cl.dajomora.improveapp.DesafioDetalleActivity"
+        android:padding="10dp"
+        android:background="#DCC2FA">
+
+        <ImageView
+            android:id="@+id/iconoDesafioDetalle"
+            app:srcCompat="@drawable/logo_improve"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tituloDesafioDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:layout_below="@id/iconoDesafioDetalle"
+            android:text="Título del desafío"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descripcionDesafioDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_below="@id/tituloDesafioDetalle"
+            android:gravity="center"
+            android:text="Descripción del desafío"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxCompletado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descripcionDesafioDetalle"
+            android:layout_marginTop="35dp"
+            android:text="Marcar como completado"
+            android:textColor="@color/design_default_color_primary"
+            android:layout_centerInParent="true" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonAceptar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkBoxCompletado"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:text="ACEPTAR"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</ScrollView>
