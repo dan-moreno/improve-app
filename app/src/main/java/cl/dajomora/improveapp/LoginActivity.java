@@ -47,47 +47,59 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void iniciarSesion() {
-        try
-        {
-            String correo = ed_correo.getText().toString();
-            String pass = ed_pass.getText().toString();
-            SQLiteDatabase db = openOrCreateDatabase("BD_USUARIOS", Context.MODE_PRIVATE,null);
-            db.execSQL("CREATE TABLE IF NOT EXISTS Usuario(ID INTEGER PRIMARY KEY AUTOINCREMENT, Nombre VARCHAR, Correo VARCHAR, Pass VARCHAR, Ocupacion VARCHAR)");
 
-            final Cursor c = db.rawQuery("SELECT * FROM Usuario",null);
-            int c_nombre = c.getColumnIndex("Nombre");
-            int c_correo = c.getColumnIndex("Correo");
-            int c_pass = c.getColumnIndex("Pass");
-            int c_ocupacion = c.getColumnIndex("Ocupacion");
-            boolean flag = true;
+        String correo = ed_correo.getText().toString();
+        String pass = ed_pass.getText().toString();
 
-            if(c.moveToFirst())
+        if(correo.equals("demo") && pass.equals("demo")){
+            Toast.makeText(this,"Sesion iniciada",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+            intent.putExtra("cuenta_nombre", "Demo");
+            intent.putExtra("cuenta_correo", "demo@gmail.com");
+            intent.putExtra("cuenta_ocupacion", "Demo");
+            intent.putExtra("desafio_completado", "");
+            startActivity(intent);
+        }
+        else{
+            try
             {
-                do{
-                    if(correo.equals(c.getString(c_correo)) && pass.equals(c.getString(c_pass))){
-                        flag = false;
-                        Toast.makeText(this,"Sesion iniciada",Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                        intent.putExtra("cuenta_nombre", c.getString(c_nombre));
-                        intent.putExtra("cuenta_correo", c.getString(c_correo));
-                        intent.putExtra("cuenta_ocupacion", c.getString(c_ocupacion));
-                        intent.putExtra("desafio_completado", "");
-                        startActivity(intent);
-                    }
-                } while(c.moveToNext());
-            }
+                boolean flag = true;
+                SQLiteDatabase db = openOrCreateDatabase("BD_USUARIOS", Context.MODE_PRIVATE,null);
+                db.execSQL("CREATE TABLE IF NOT EXISTS Usuario(ID INTEGER PRIMARY KEY AUTOINCREMENT, Nombre VARCHAR, Correo VARCHAR, Pass VARCHAR, Ocupacion VARCHAR)");
 
-            if(flag){
-                ed_correo.setText("");
-                ed_pass.setText("");
-                ed_correo.requestFocus();
-                Toast.makeText(this,"Usuario o contraseña incorrectos",Toast.LENGTH_LONG).show();
+                final Cursor c = db.rawQuery("SELECT * FROM Usuario",null);
+                int c_nombre = c.getColumnIndex("Nombre");
+                int c_correo = c.getColumnIndex("Correo");
+                int c_pass = c.getColumnIndex("Pass");
+                int c_ocupacion = c.getColumnIndex("Ocupacion");
+
+                if(c.moveToFirst())
+                {
+                    do{
+                        if(correo.equals(c.getString(c_correo))  && pass.equals(c.getString(c_pass))){
+                            flag = false;
+                            Toast.makeText(this,"Sesion iniciada",Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                            intent.putExtra("cuenta_nombre", c.getString(c_nombre));
+                            intent.putExtra("cuenta_correo", c.getString(c_correo));
+                            intent.putExtra("cuenta_ocupacion", c.getString(c_ocupacion));
+                            intent.putExtra("desafio_completado", "");
+                            startActivity(intent);
+                        }
+                    } while(c.moveToNext());
+                }
+
+                if(flag){
+                    ed_correo.setText("");
+                    ed_pass.setText("");
+                    ed_correo.requestFocus();
+                    Toast.makeText(this,"Usuario o contraseña incorrectos",Toast.LENGTH_LONG).show();
+                }
+            }
+            catch (Exception ex)
+            {
+                Toast.makeText(this,"Error no se pudieron guardar los datos.",Toast.LENGTH_LONG).show();
             }
         }
-        catch (Exception ex)
-        {
-            Toast.makeText(this,"Error no se pudieron guardar los datos.",Toast.LENGTH_LONG).show();
-        }
-
     }
 }

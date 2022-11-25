@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DCC2FA"
-    android:padding="8dp"
-    tools:context="cl.dajomora.improveapp.LogrosFragment">
+    android:background="#DCC2FA">
 
-    <GridView
-        android:id="@+id/gridLogros"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:horizontalSpacing="10dp"
-        android:numColumns="2"
-        android:verticalSpacing="10dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        tools:context="cl.dajomora.improveapp.CuentaFragment"
+        android:padding="20dp"
+        android:background="#DCC2FA">
+
+        <TextView
+            android:id="@+id/tituloLogros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:gravity="center"
+            android:text="Logros"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <GridView
+            android:id="@+id/gridLogros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tituloLogros"
+            android:horizontalSpacing="10dp"
+            android:numColumns="2"
+            android:verticalSpacing="10dp"/>
+    </RelativeLayout>
+</ScrollView>

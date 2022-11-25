@@ -6,6 +6,7 @@
     android:background="#DCC2FA">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,19 +18,38 @@
             android:id="@+id/tituloCuenta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
+            android:layout_margin="20dp"
             android:gravity="center"
             android:text="Detalles de la cuenta"
             android:textColor="@color/design_default_color_primary"
             android:textSize="30sp"
             android:textStyle="bold" />
 
+        <ImageView
+            android:id="@+id/imgCuenta"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/tituloCuenta"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/botonImagen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tituloCuenta"
+            android:layout_toEndOf="@id/imgCuenta"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="10dp"
+            android:drawableBottom="@drawable/ic_baseline_photo"
+            android:drawableTint="@color/white"/>
+
         <TextView
             android:id="@+id/tagNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_below="@id/tituloCuenta"
+            android:layout_below="@id/imgCuenta"
             android:text="Nombre:"
             android:textColor="@color/design_default_color_primary"
             android:textSize="20sp"
@@ -40,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_below="@id/tituloCuenta"
+            android:layout_below="@id/imgCuenta"
             android:layout_toEndOf="@+id/tagNombre"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -92,7 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tagOcupacion"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="40dp"
             android:backgroundTint="@color/design_default_color_primary"
             android:text="EDITAR DATOS"
             android:textColor="@color/white" />
@@ -112,7 +132,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/botonSalir"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:backgroundTint="#8B0000"
             android:text="ELIMINAR CUENTA"
             android:textColor="@color/white" />

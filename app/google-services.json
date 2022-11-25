@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "235777740531",
+    "project_id": "improve-app-90543",
+    "storage_bucket": "improve-app-90543.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235777740531:android:2ac0060a1605f10d13b186",
+        "android_client_info": {
+          "package_name": "cl.dajomora.improveapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235777740531-37mgrispn5118330s1lboo1e2i5rb1rq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh_v8Let-_3040EbUVceLzN3WCFNVUcOA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "235777740531-37mgrispn5118330s1lboo1e2i5rb1rq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
